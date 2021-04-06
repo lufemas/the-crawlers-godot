@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://src/assets/dungeon-tiles-0.png" type="Texture" id=1]
+[ext_resource path="res://src/scenes/DoorScene.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 15, 32, 64.303, 32 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 15, 128, 64.303, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 192.064, 239.232, 32.5076, 65.6786 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( -1.65469, 239.895, 35.1613, 65.6786 )
+
+[node name="Door" type="Area2D"]
+script = ExtResource( 2 )
+facingPos = "U"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprites" type="Node2D" parent="."]
+
+[node name="U" type="Sprite" parent="Sprites"]
+visible = false
+texture = SubResource( 2 )
+
+[node name="D" type="Sprite" parent="Sprites"]
+visible = false
+texture = SubResource( 3 )
+
+[node name="L" type="Sprite" parent="Sprites"]
+visible = false
+texture = SubResource( 4 )
+
+[node name="R" type="Sprite" parent="Sprites"]
+visible = false
+texture = SubResource( 5 )

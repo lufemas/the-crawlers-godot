@@ -1,0 +1,191 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "Attacks",
+"language": "GDScript",
+"path": "res://src/scripts/AttacksData.gd"
+}, {
+"base": "Node",
+"class": "Dungeon",
+"language": "GDScript",
+"path": "res://src/classes/Dungeon.gd"
+}, {
+"base": "Resource",
+"class": "InventoryData",
+"language": "GDScript",
+"path": "res://addons/inventory_editor/model/InventoryData.gd"
+}, {
+"base": "EditorProperty",
+"class": "InventoryInspectorEditorInventory",
+"language": "GDScript",
+"path": "res://addons/inventory_editor/InventoryInspectorPluginEditorInventory.gd"
+}, {
+"base": "EditorProperty",
+"class": "InventoryInspectorEditorItem",
+"language": "GDScript",
+"path": "res://addons/inventory_editor/InventoryInspectorPluginEditorItem.gd"
+}, {
+"base": "EditorProperty",
+"class": "InventoryInspectorEditorType",
+"language": "GDScript",
+"path": "res://addons/inventory_editor/InventoryInspectorPluginEditorType.gd"
+}, {
+"base": "Resource",
+"class": "InventoryInventories",
+"language": "GDScript",
+"path": "res://addons/inventory_editor/InventoryManagerInventories.gd"
+}, {
+"base": "Resource",
+"class": "InventoryInventory",
+"language": "GDScript",
+"path": "res://addons/inventory_editor/model/InventoryInventory.gd"
+}, {
+"base": "Resource",
+"class": "InventoryItem",
+"language": "GDScript",
+"path": "res://addons/inventory_editor/model/InventoryItem.gd"
+}, {
+"base": "Reference",
+"class": "InventoryManagerInventory",
+"language": "GDScript",
+"path": "res://addons/inventory_editor/InventoryManagerInventory.gd"
+}, {
+"base": "Reference",
+"class": "InventoryManagerItem",
+"language": "GDScript",
+"path": "res://addons/inventory_editor/InventoryManagerItem.gd"
+}, {
+"base": "Resource",
+"class": "InventoryType",
+"language": "GDScript",
+"path": "res://addons/inventory_editor/model/InventoryType.gd"
+}, {
+"base": "Control",
+"class": "InventoryUI",
+"language": "GDScript",
+"path": "res://addons/inventory_editor/ui/InventoryInventoryUI.gd"
+}, {
+"base": "Node2D",
+"class": "Item2D",
+"language": "GDScript",
+"path": "res://addons/inventory_editor/InventoryItem2D.gd"
+}, {
+"base": "Spatial",
+"class": "Item3D",
+"language": "GDScript",
+"path": "res://addons/inventory_editor/InventoryItem3D.gd"
+}, {
+"base": "TextureRect",
+"class": "ItemUI",
+"language": "GDScript",
+"path": "res://addons/inventory_editor/ui/InventoryItemUI.gd"
+}, {
+"base": "Node",
+"class": "Room",
+"language": "GDScript",
+"path": "res://src/classes/Room.gd"
+} ]
+_global_script_class_icons={
+"Attacks": "",
+"Dungeon": "",
+"InventoryData": "",
+"InventoryInspectorEditorInventory": "",
+"InventoryInspectorEditorItem": "",
+"InventoryInspectorEditorType": "",
+"InventoryInventories": "",
+"InventoryInventory": "",
+"InventoryItem": "",
+"InventoryManagerInventory": "",
+"InventoryManagerItem": "",
+"InventoryType": "",
+"InventoryUI": "",
+"Item2D": "",
+"Item3D": "",
+"ItemUI": "",
+"Room": ""
+}
+
+[application]
+
+config/name="The Crawlers"
+run/main_scene="res://src/scenes/Dungeon.tscn"
+config/icon="res://icon.png"
+network/application_type=0
+network/host="localhost"
+network/port=8089
+network/allow_cmd_line=true
+
+[display]
+
+window/size/width=640
+window/size/height=480
+window/size/test_width=1280
+window/size/test_height=960
+window/stretch/mode="2d"
+window/stretch/aspect="expand"
+
+[input]
+
+axis_x_left={
+"deadzone": 0.1,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":-1.0,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
+ ]
+}
+axis_x_right={
+"deadzone": 0.1,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":0,"axis_value":1.0,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"unicode":0,"echo":false,"script":null)
+ ]
+}
+axis_y_up={
+"deadzone": 0.1,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":-1.0,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"unicode":0,"echo":false,"script":null)
+ ]
+}
+axis_y_down={
+"deadzone": 0.1,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":1.0,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"unicode":0,"echo":false,"script":null)
+ ]
+}
+axis_aim_left={
+"deadzone": 0.1,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":2,"axis_value":-1.0,"script":null)
+ ]
+}
+axis_aim_right={
+"deadzone": 0.1,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":2,"axis_value":1.0,"script":null)
+ ]
+}
+axis_aim_up={
+"deadzone": 0.1,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":3,"axis_value":-1.0,"script":null)
+ ]
+}
+axis_aim_down={
+"deadzone": 0.1,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":3,"axis_value":1.0,"script":null)
+ ]
+}
+fire={
+"deadzone": 0.3,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":7,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
