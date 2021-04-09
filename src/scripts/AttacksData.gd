@@ -2,14 +2,22 @@ extends Node
 
 class_name Attacks
 
-var Attacks_data = {
+export var data = {
 	"Spell Attack":{
 		"range" : 'range',
 		"type" : 'magic',
 		"aim": true,
 		"delay": 1.0,
 		"wait_time": 2.0,
-		"scene": 'res://src/scripts/SpellScene.gd'
+		"scene": preload('res://src/scenes/Spell.tscn')
+	},
+	"Ball":{
+		"range" : 'range',
+		"type" : 'magic',
+		"aim": true,
+		"delay": 1.0,
+		"wait_time": 2.0,
+		"scene": preload('res://src/scenes/SpellSimple.tscn')
 	},
 }
 # Declare member variables here. Examples:
@@ -22,5 +30,4 @@ func _ready():
 	pass # Replace with function body.
 
 
-func summon_attack(attack : String, actor: Node2D):
-	pass
+

@@ -10,3 +10,4 @@ data_*/
 
 #lufe-specific ignores
 .Build/
+.build/

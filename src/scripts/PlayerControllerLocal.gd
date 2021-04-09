@@ -4,6 +4,7 @@ extends Node
 # Declare member variables here. Examples:
 # var a = 2
 onready var body = get_parent()
+onready var state_controller = body.get_node("StateController")
 var walk_movement = Vector2()
 var dash_direction = Vector2()
 var aim_vector = Vector2()
@@ -47,10 +48,7 @@ func _input(event):
 	
 	if input:
 		if input.is_action_pressed("fire"):
-			var new_spell = preload("res://src/scenes/Spell.tscn").instance()
-			new_spell.direction = get_parent().get_node("Aim").aim.direction.normalized() * 300
-			new_spell.position = get_parent().get_node("Aim/Sprite").global_position
-			get_tree().current_scene.add_child(new_spell)
+			state_controller.call_action('attack', {'attackName': 'Ball'})
 	
 #	if mouse_motion:
 #		aim_vector = (get_tree().current_scene.get_global_mouse_position() - body.position).normalized() 

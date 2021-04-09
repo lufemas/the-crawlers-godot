@@ -23,6 +23,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print(aim.sprite.global_position)
+#	print(aim.sprite.global_position)
 	$AnimationControler.walk_animation($Movement.walk())
+	
+	
 	pass

@@ -124,6 +124,11 @@ network/host="localhost"
 network/port=8089
 network/allow_cmd_line=true
 
+[autoload]
+
+GM="*res://src/scripts/GameManager.gd"
+Network="*res://src/scripts/Network.gd"
+
 [display]
 
 window/size/width=640
